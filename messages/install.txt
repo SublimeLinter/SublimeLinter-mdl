@@ -1,10 +1,7 @@
-SublimeLinter-contrib-mdl
+SublimeLinter-mdl
 -------------------------------
 This linter plugin for SublimeLinter provides an interface to mdl.
 
-** IMPORTANT! **
+Please read the installation instructions at:
 
-Before this plugin will activate, you *must*
-follow the installation instructions here:
-
-https://github.com/roadhump/SublimeLinter-contrib-mdl
+https://github.com/roadhump/SublimeLinter-mdl
