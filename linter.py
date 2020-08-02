@@ -1,8 +1,8 @@
-from SublimeLinter.lint import RubyLinter
+from SublimeLinter.lint import Linter
 
 
-class Mdl(RubyLinter):
-    executable = 'mdl'
+class Mdl(Linter):
+    cmd= ['mdl', '${temp_file}']
     regex = r'^.+?:(?P<line>\d+): (?P<warning>(?P<message>[^`]*))'
     line_col_base = (1, 1)
     tempfile_suffix = 'md'
@@ -10,9 +10,3 @@ class Mdl(RubyLinter):
         'selector': 'text.html.markdown'
     }
 
-    def cmd(self):
-        """Support bundle-exec."""
-
-        if self.get_view_settings().get('bundle-exec', False):
-            return ('bundle', 'exec', self.executable)
-        return (self.executable_path)
